@@ -61,12 +61,45 @@ O ambiente de testes requer um computador com:
 
 ## 2.1 Como preparar o ambiente
 
-Após certifica-se de que todos os requisitos de hardware e software foram atendidos, inicie o Oracle VM VirtualBox e importe a imagem completa do sistema operacional contida neste [repositório de downloads](soon).
+Após certifica-se de que todos os requisitos de hardware e software foram atendidos, realize o download da imagem mais recente da máquina virtual contendo os aparatos para o experimento de segurança e importe-o em sua Oracle VM VirtualBox. O processo de importação da máquina Virtual pode ser feito da seguinte forma:
 
+## 1 - Execute a Oracle VM VirtualBox
+
+<p align="center">
+	<img src="https://i.imgur.com/vPQGyaU.png"/>
+</p>
+
+## 2 - Clique em "Importar Appliance..."
+
+<p align="center">
+	<img src="https://i.imgur.com/Cln40SA.png"/>
+</p>
+
+## 3 - Clique no botão imediatamente à direita da caixa de texto e selecione a imagem baixada anteriormente com a extensão ".ova".
+
+<p align="center">
+	<img src="https://i.imgur.com/P2PYPYo.png"/>
+</p>
+
+## 4 - Concorde com a licença do Appliance e importe a máquina virtual
+
+<p align="center">
+	<img src="https://i.imgur.com/sm14mYr.png">
+</p>
+
+## 5 - Após a importação, a máquina virtual estará pronta para ser executada. 
+
+**OBS: A senha do sistema é: sbseg2020**
+
+<p align="center">
+	<img src="https://i.imgur.com/GMCcqPh.png"/>
+</p>
 
 <div id="en-sec-22"></div>
 
 ## 2.2 Como realizar os testes
+
+
 
 <div id="en-sec-31"></div>
 
