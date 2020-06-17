@@ -146,13 +146,17 @@ Nessa etapa, foram usados payloads de level 1 e level 2, obtendo respectivamente
 
 ### [+] Vídeo do experimento
 
+<center>
 
+[<img src="https://img.youtube.com/vi/NjGa_2IjXH8/maxresdefault.jpg" width="50%">](https://youtu.be/NjGa_2IjXH8)
+
+</center>
 
 <div id="pt-sec-41"></div>
 
 ## 4.1 Licença do projeto
 
-##### O projeto está sendo mantido sob a licença MIT e pode ser encontrada [aqui](). Aceitamos contribuições de qualquer pessoa no projeto bem como sugestões e relatórios de bugs que também serão muito bem vindos.
+##### O projeto está sendo mantido sob a licença MIT e pode ser encontrada [aqui](https://github.com/MurylloEx/Mini-WAF). Aceitamos contribuições de qualquer pessoa no projeto bem como sugestões e relatórios de bugs que também serão muito bem vindos.
 
 <div id="pt-sec-42"></div>
 
@@ -256,14 +260,10 @@ After making sure that all hardware and software requirements have been met, dow
 
 In this step, level 1 and level 2 payloads were used, obtaining respectively the following numbers of blocked connections:
 
-<center>
-
 | Level | 	Requests  |   Non-blocked   |   Blocked  |
 |:-----:|:-----------:|:---------------:|:----------:|
 |   1   |     78      |        5        |     73     |
 |   2   |     372     |        22       |     350    |
-
-</center>
 
 <p align="center">
 	<img src="https://i.imgur.com/qkvHrtx.png"/>
@@ -273,9 +273,18 @@ In this step, level 1 and level 2 payloads were used, obtaining respectively the
 
 <center>
 
-[<img src="https://img.youtube.com/vi/cDL-9UOSflc/maxresdefault.jpg" width="50%">](https://youtu.be/cDL-9UOSflc)
+[<img src="https://img.youtube.com/vi/NjGa_2IjXH8/maxresdefault.jpg" width="50%">](https://youtu.be/NjGa_2IjXH8)
 
 </center>
 
 <div id="en-sec-41"></div>
+
+## 4.1 License of project
+
+##### The project is being maintained under the MIT license and can be found [here] (https://github.com/MurylloEx/Mini-WAF). We accept contributions from anyone on the project as well as suggestions and bug reports that are also very welcome.
+
 <div id="en-sec-42"></div>
+
+## 4.2 Maintainers of project
+
+#### This project is maintained by Muryllo Pimenta de Oliveira - [GitHub Profile](https://github.com/MurylloEx/), currently supervised by professor at the University of Pernambuco Carlo Marcelo Revoredo - [GitHub Profile](https://github.com/cmrevoredo/).
