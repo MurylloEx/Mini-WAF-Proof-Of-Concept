@@ -21,17 +21,17 @@
 
 - (English) Guide to prepare the test environment
     1. Requirements
-        * [1. Hardware requirements](#en-sec-11)
+        * [1.1 Hardware requirements](#en-sec-11)
 	    * [1.2 Software requirements](#en-sec-12)
     2. Reproduction environment
 	    * [2.1 How to prepare the environment](#en-sec-21)
 	    * [2.1 How to perform the tests](#en-sec-22)
     3. Research results
-	    * [3. Results obtained](#en-sec-31)
-        * [3. Results in real environment](#en-sec-32)
+	    * [3.1 Results obtained](#en-sec-31)
+        * [3.2 Results in real environment](#en-sec-32)
     4. Project license and maintainers
-	    * [6. Project license](#en-sec-41)
-	    * [7. Project maintainers](#en-sec-42)
+	    * [4.1 Project license](#en-sec-41)
+	    * [4.2 Project maintainers](#en-sec-42)
 
 <div id="pt-sec-11"></div>
 
@@ -63,31 +63,31 @@ O ambiente de testes requer um computador com:
 
 Após certifica-se de que todos os requisitos de hardware e software foram atendidos, realize o download da imagem mais recente da máquina virtual contendo os aparatos para o experimento de segurança e importe-o em sua Oracle VM VirtualBox. O processo de importação da máquina Virtual pode ser feito da seguinte forma:
 
-## 1 - Execute a Oracle VM VirtualBox
+### 1 - Execute a Oracle VM VirtualBox
 
 <p align="center">
 	<img src="https://i.imgur.com/vPQGyaU.png"/>
 </p>
 
-## 2 - Clique em "Importar Appliance..."
+### 2 - Clique em "Importar Appliance..."
 
 <p align="center">
 	<img src="https://i.imgur.com/Cln40SA.png"/>
 </p>
 
-## 3 - Clique no botão imediatamente à direita da caixa de texto e selecione a imagem baixada anteriormente com a extensão ".ova".
+### 3 - Clique no botão imediatamente à direita da caixa de texto e selecione a imagem baixada anteriormente com a extensão ".ova".
 
 <p align="center">
 	<img src="https://i.imgur.com/P2PYPYo.png"/>
 </p>
 
-## 4 - Concorde com a licença do Appliance e importe a máquina virtual
+### 4 - Concorde com a licença do Appliance e importe a máquina virtual
 
 <p align="center">
 	<img src="https://i.imgur.com/sm14mYr.png">
 </p>
 
-## 5 - Após a importação, a máquina virtual estará pronta para ser executada. 
+### 5 - Após a importação, a máquina virtual estará pronta para ser executada. 
 
 **OBS: A senha do sistema é: sbseg2020**
 
@@ -95,7 +95,7 @@ Após certifica-se de que todos os requisitos de hardware e software foram atend
 	<img src="https://i.imgur.com/GMCcqPh.png"/>
 </p>
 
-<div id="en-sec-22"></div>
+<div id="pt-sec-22"></div>
 
 ## 2.2 Como realizar os testes
 
@@ -108,6 +108,45 @@ Após certifica-se de que todos os requisitos de hardware e software foram atend
 <div id="pt-sec-32"></div>
 
 ## 3.2 Resultados em ambiente real
+
+### 1. Burlando a proteção da Cloudflare e obtendo o endereço de IP real do servidor (ferramenta [CloudFail](https://github.com/m0rtem/CloudFail) utilizada no processo).
+
+<p align="center">
+	<img src="https://i.imgur.com/DmgvGko.png"/>
+</p>
+
+### 2. Realizando uma conexão SSH com o servidor alvo de domínio particular e estabelecendo um túnel TCP entre as portas 5901 do servidor remoto e local para posterior uso do VNC.
+
+<p align="center">
+	<img src="https://i.imgur.com/MTY6ZTL.png"/>
+</p>
+
+### 3. De posse do endereço de IP real do servidor (191.240.183.32), iniciando uma simulação de injeção de SQL no parâmetro GET http://191.240.183.32?id= (ferramenta [Sqlmap](https://github.com/sqlmapproject/sqlmap) usada no processo).
+
+<p align="center">
+	<img src="https://i.imgur.com/kdoHta3.png"/>
+</p>
+
+### 4. Após o tunelamento SSH concluído nas portas 5901, conectando-se ao servidor VNC remoto e visualizando o Minimalistic WAF contendo mais de 90% dos ataques realizados e rejeitando as conexões de entrada com status HTTP 403.
+
+Nessa etapa, foram usados payloads de level 1 e level 2, obtendo respectivamente os seguintes números de conexões bloqueadas:
+
+<center>
+
+| Nível | Requisições |  Não bloqueadas | Bloqueadas |
+|:-----:|:-----------:|:---------------:|:----------:|
+| 1     |     78      |        5        |     73     |
+| 2     |     372     |        22       |     350    |
+
+</center>
+
+<p align="center">
+	<img src="https://i.imgur.com/qkvHrtx.png"/>
+</p>
+
+### [+] Vídeo do experimento
+
+
 
 <div id="pt-sec-41"></div>
 
@@ -192,5 +231,51 @@ After making sure that all hardware and software requirements have been met, dow
 <div id="en-sec-22"></div>
 <div id="en-sec-31"></div>
 <div id="en-sec-32"></div>
+
+## 3.2 Results in real environment
+
+### 1. Bypassing the protection of Cloudflare and obtaining the real IP address of the server (tool [CloudFail](https://github.com/m0rtem/CloudFail) used in the process).
+
+<p align="center">
+	<img src="https://i.imgur.com/DmgvGko.png"/>
+</p>
+
+### 2. Making an SSH connection with the target server of private domain and establishing a TCP tunnel between ports 5901 of the remote and local server for later use of VNC.
+
+<p align="center">
+	<img src="https://i.imgur.com/MTY6ZTL.png"/>
+</p>
+
+### 3. With the real IP address of the server (191.240.183.32), starting a SQL injection simulation in the GET parameter http://191.240.183.32?id= (tool [Sqlmap](https://github.com/sqlmapproject/sqlmap) used in the process).
+
+<p align="center">
+	<img src="https://i.imgur.com/kdoHta3.png"/>
+</p>
+
+### 4. After the SSH tunneling completed on ports 5901, connecting to the remote VNC server and viewing the Minimalistic WAF containing over 90% of the attacks carried out and rejecting incoming connections with HTTP 403 status.
+
+In this step, level 1 and level 2 payloads were used, obtaining respectively the following numbers of blocked connections:
+
+<center>
+
+| Level | 	Requests  |   Non-blocked   |   Blocked  |
+|:-----:|:-----------:|:---------------:|:----------:|
+|   1   |     78      |        5        |     73     |
+|   2   |     372     |        22       |     350    |
+
+</center>
+
+<p align="center">
+	<img src="https://i.imgur.com/qkvHrtx.png"/>
+</p>
+
+### [+] Video of experiment
+
+<center>
+
+[<img src="https://img.youtube.com/vi/cDL-9UOSflc/maxresdefault.jpg" width="50%">](https://youtu.be/cDL-9UOSflc)
+
+</center>
+
 <div id="en-sec-41"></div>
 <div id="en-sec-42"></div>
