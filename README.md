@@ -61,7 +61,7 @@ O ambiente de testes requer um computador com:
 
 ## 2.1 Como preparar o ambiente
 
-Após certifica-se de que todos os requisitos de hardware e software foram atendidos, realize o download da imagem mais recente da máquina virtual contendo os aparatos para o experimento de segurança e importe-o em sua Oracle VM VirtualBox. O processo de importação da máquina Virtual pode ser feito da seguinte forma:
+Após certifica-se de que todos os requisitos de hardware e software foram atendidos, realize o [download da imagem](https://docs.google.com/uc?export=download&id=1JJvJJZJvlk2sNVCpCiAi9Si3BS2BtB9Q) mais recente da máquina virtual contendo os aparatos para o experimento de segurança e importe-o em sua Oracle VM VirtualBox. O processo de importação da máquina Virtual pode ser feito da seguinte forma:
 
 ### 1 - Execute a Oracle VM VirtualBox
 
@@ -99,7 +99,30 @@ Após certifica-se de que todos os requisitos de hardware e software foram atend
 
 ## 2.2 Como realizar os testes
 
+Os testes são realizados na imagem pronta do ambiente de testes. Execute a máquina virtual e efetue o login no usuário sbseg2020 com a senha também sbseg2020. Após efetuar seu login, procure na área de trabalho pela pasta Proof Of Concept e siga as instruções do arquivo README (LEIA-ME) presente.
 
+```
+sudo su
+chmod +x poc-setup.sh
+./poc-setup.sh
+```
+
+Após o comando acima, aguarde até que o ambiente seja preparado. A linha de comando iniciará:
+
+- Apache
+- MySQL/MariaDB
+- DVWA
+- Minimalistic WAF
+
+Além disso, o comando instalará na mesma pasta Proof Of Concept o SQLMAP na versão mais atual para fins de testes de injeção de SQL necessários em alguns módulos do DVWA.
+
+Observe que o ambiente será acessível no **localhost** que é o proxy contendo o Mini-WAF para o verdadeiro DVWA que roda em **localhost:8081**.
+
+<p align="center">
+	<img src="https://i.imgur.com/B3us4ug.png"/>
+</p>
+
+A imagem acima ilustra o esquema de proteção implantado no DVWA onde o cliente acessa o localhost que é o proxy do Mini-WAF e o proxy redireciona e filtra conexões maliciosas para o servidor do DVWA na porta 8081.
 
 <div id="pt-sec-31"></div>
 
@@ -194,7 +217,7 @@ The test environment requires a computer with:
 
 ## 2.1 How to prepare the environment
 
-After making sure that all hardware and software requirements have been met, download the latest image of the virtual machine containing the devices for the security experiment and import it into your Oracle VM VirtualBox. The Virtual machine import process can be done as follows:
+After making sure that all hardware and software requirements have been met, [download the latest image](https://docs.google.com/uc?export=download&id=1JJvJJZJvlk2sNVCpCiAi9Si3BS2BtB9Q) of the virtual machine containing the devices for the security experiment and import it into your Oracle VM VirtualBox. The Virtual machine import process can be done as follows:
 
 ## 1 - Run the Oracle VM VirtualBox
 
@@ -230,9 +253,33 @@ After making sure that all hardware and software requirements have been met, dow
 
 <div id="en-sec-22"></div>
 
+## How to perform the tests
 
+The tests are performed on the ready image of the test environment. Run the virtual machine and log in to the user sbseg2020 with the password also sbseg2020. After logging in, look on the desktop for the Proof Of Concept folder and follow the instructions in the README (LEIA-ME.txt) file present.
 
-<div id="en-sec-22"></div>
+```
+sudo su
+chmod +x poc-setup.sh
+./poc-setup.sh
+```
+
+After the above command, wait until the environment is prepared. The command line will start:
+
+- Apache
+- MySQL/MariaDB
+- DVWA
+- Minimalistic WAF
+
+In addition, the command will install SQLMAP in the most current version in the same Proof Of Concept folder for the purpose of SQL injection testing required in some DVWA modules.
+
+Note that the environment will be accessible on **localhost** which is the proxy containing the Mini-WAF for the real DVWA that runs on **localhost:8081**.
+
+<p align="center">
+	<img src="https://i.imgur.com/B3us4ug.png"/>
+</p>
+
+The image above illustrates the protection scheme implemented in DVWA where the client accesses the localhost which is the Mini-WAF proxy and the proxy redirects and filters malicious connections to the DVWA server on port 8081.
+
 <div id="en-sec-31"></div>
 <div id="en-sec-32"></div>
 
