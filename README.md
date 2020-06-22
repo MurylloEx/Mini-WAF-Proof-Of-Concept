@@ -119,7 +119,7 @@ Além disso, o comando instalará na mesma pasta Proof Of Concept o SQLMAP na ve
 Observe que o ambiente será acessível no **localhost** que é o proxy contendo o Mini-WAF para o verdadeiro DVWA que roda em **localhost:8081**.
 
 <p align="center">
-	<img src="https://i.imgur.com/B3us4ug.png"/>
+	<img src="https://i.imgur.com/lcvi6Be.png"/>
 </p>
 
 A imagem acima ilustra o esquema de proteção implantado no DVWA onde o cliente acessa o localhost que é o proxy do Mini-WAF e o proxy redireciona e filtra conexões maliciosas para o servidor do DVWA na porta 8081.
@@ -253,7 +253,7 @@ After making sure that all hardware and software requirements have been met, [do
 
 <div id="en-sec-22"></div>
 
-## How to perform the tests
+## 2.2 How to perform the tests
 
 The tests are performed on the ready image of the test environment. Run the virtual machine and log in to the user sbseg2020 with the password also sbseg2020. After logging in, look on the desktop for the Proof Of Concept folder and follow the instructions in the README (LEIA-ME.txt) file present.
 
@@ -275,7 +275,7 @@ In addition, the command will install SQLMAP in the most current version in the 
 Note that the environment will be accessible on **localhost** which is the proxy containing the Mini-WAF for the real DVWA that runs on **localhost:8081**.
 
 <p align="center">
-	<img src="https://i.imgur.com/B3us4ug.png"/>
+	<img src="https://i.imgur.com/lcvi6Be.png"/>
 </p>
 
 The image above illustrates the protection scheme implemented in DVWA where the client accesses the localhost which is the Mini-WAF proxy and the proxy redirects and filters malicious connections to the DVWA server on port 8081.
