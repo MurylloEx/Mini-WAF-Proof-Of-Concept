@@ -14,7 +14,8 @@
 	    * [2.2 Como realizar os testes](#pt-sec-22)
     3. Resultados da pesquisa
 	    * [3.1 Resultados obtidos](#pt-sec-31)
-        * [3.2 Resultados em ambiente real](#pt-sec-32)
+    	* [3.2 Resultados em ambiente real](#pt-sec-32)
+	* [Vídeo do Experimento](#pt-sec-video)
     4. Licença do projeto e mantenedores
 	    * [4.1 Licença do projeto](#pt-sec-41)
 	    * [4.2 Mantenedores do projeto](#pt-sec-42)
@@ -29,6 +30,7 @@
     3. Research results
 	    * [3.1 Results obtained](#en-sec-31)
         * [3.2 Results in real environment](#en-sec-32)
+	* [Video of Experiment](#en-sec-video)
     4. Project license and maintainers
 	    * [4.1 Project license](#en-sec-41)
 	    * [4.2 Project maintainers](#en-sec-42)
@@ -166,6 +168,8 @@ Nessa etapa, foram usados payloads de level 1 e level 2, obtendo respectivamente
 <p align="center">
 	<img src="https://i.imgur.com/qkvHrtx.png"/>
 </p>
+
+<div id="pt-sec-video"></div>
 
 ### [+] Vídeo do experimento
 
@@ -315,6 +319,8 @@ In this step, level 1 and level 2 payloads were used, obtaining respectively the
 <p align="center">
 	<img src="https://i.imgur.com/qkvHrtx.png"/>
 </p>
+
+<div id="en-sec-video"></div>
 
 ### [+] Video of experiment
 
